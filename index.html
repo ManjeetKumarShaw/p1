@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Ticket Reservation</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+ }
+ header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+ }
+ #user-section {
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+ form {
+    margin-bottom: 20px;
+ }
+ label {
+    display: block;
+    margin-bottom: 5px;
+ }
+ input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+ }
+ button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+ }
+ button:hover {
+    background-color: #45a049;
+ }
+ footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+ }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Air Ticket Reservation</h1>
+    </header>
+    <section id="user-section">
+        <h2>User Interface</h2>
+        <form id="flight-search-form">
+            <label for="departure">Departure City:</label>
+            <input type="text" id="departure" name="departure" required>
+            <label for="destination">Destination City:</label>
+            <input type="text" id="destination" name="destination" required>
+            <button type="button" onclick="searchFlights()">Search Flights</button>
+        </form>
+        <form id="booking-form">
+            <h3>Book Ticket</h3>
+            <!-- Include fields for booking details -->
+            <button type="button" onclick="bookTicket()">Book Now</button>
+        </form>
+        <form id="cancellation-form">
+            <h3>Cancel Flight</h3>
+            <label for="booking-code">Booking Code:</label>
+            <input type="text" id="booking-code" name="booking-code" required>
+            <button type="button" onclick="cancelFlight()">Cancel Booking</button>
+        </form>
+        <form id="edit-details-form">
+            <h3>Edit Details</h3>
+            <!-- Include fields for editing details -->
+            <button type="button" onclick="editDetails()">Save Changes</button>
+        </form>
+    </section>
+    <footer>
+        <p>Built with &hearts; by Manjeet</p>
+    </footer>
+</body>
+
+</html>
